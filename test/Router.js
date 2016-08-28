@@ -16,5 +16,4 @@ describe('Router', () => {
   it('should convert the route to a its correct corresponding regexp', () => {
     routeToRegExp('/foo/bar').test('/foo/bar').should.be.true()
   })
-
 })
