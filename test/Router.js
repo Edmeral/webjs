@@ -16,4 +16,14 @@ describe('Router', () => {
   it('should convert the route to a its correct corresponding regexp', () => {
     routeToRegExp('/foo/bar').test('/foo/bar').should.be.true()
   })
+
+  it('should correct matches not having trailing slash at the end of the route', () => {
+    routeToRegExp('/:param1/:param2').test('/foo/bar').should.be.true()
+    routeToRegExp('/app').test('/app').should.be.true()
+  })
+
+  it('should correct matches with a trailing slash at the end of the route', () => {
+    routeToRegExp('/:param1/:param2').test('/foo/bar/').should.be.true()
+    routeToRegExp('/app').test('/app/').should.be.true()
+  })
 })
