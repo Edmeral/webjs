@@ -37,7 +37,7 @@ Other examples are available in the examples folder.
   * `res.send([body])` sends either a string as **text/html**, or if passed an object sends it as **application/json**.
   * `sendFile([path])` transfers the file at the given path.
   * `res.status(code)` sets the HTTP status for the response.
-  * `res.render(view [, options])` render a view, rendering engine must specified before, views are considered to be in the views directory unless specified otherwise, options contain the elements the variables to be injected when rendering the view.
+  * `res.render(view [, options])` render a view, a rendering engine must specified before, views are considered to be in the views directory unless specified otherwise, options contain the elements to be injected when rendering the view.
 
     ```js
     // app.set('views', 'views-directory') // setting another views directory
